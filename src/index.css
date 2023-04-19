@@ -22,7 +22,7 @@
 
 .movieContaier {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
 }
 
@@ -61,7 +61,6 @@
 
 span {
   display: flex;
-  align-self: right;
   margin-bottom: 0.4rem;
 }
 
@@ -82,7 +81,6 @@ span {
 
 .active {
   transform: translateY(0rem);
-  z-index: 10;
 }
 
 .deactive {

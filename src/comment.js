@@ -24,7 +24,7 @@ export default class Comment {
       const response = await fetch(request);
       const bodyResponse = await response.json();
       for (let i = 0; i < bodyResponse.length; i += 1) {
-        if (bodyResponse[i].show.id == ides) {
+        if (Number(bodyResponse[i].show.id) === Number(ides)) {
           commentPopup.innerHTML = `<img src="${bodyResponse[i].show.image.original}" alt="" class="comment-img">
           <h1 class="com-header">${bodyResponse[i].show.name}</h1>
           <div class="discription">
