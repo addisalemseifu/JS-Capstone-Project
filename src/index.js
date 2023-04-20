@@ -30,16 +30,18 @@ movieContaier.addEventListener('click', (e) => {
 
 commentPopup.addEventListener('click', (e) => {
   let commentObject;
+  let ids = 0;
   if (e.target.classList.contains('submitComment')) {
-    const ids = e.target.id;
+    ids = e.target.id;
     const userName = document.querySelector('.userName');
     const userComment = document.querySelector('.userComment');
     if (userName.value !== '' && userComment !== '') {
       commentObject = {
-        item_id: ids,
+        "item_id": ids,
         username: userName.value,
         comment: userComment.value,
       };
+      console.log(commentObject)
     }
     Comment.commentPost(commentObject, ids);
   }
